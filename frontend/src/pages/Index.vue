@@ -1,17 +1,82 @@
-* {
+<template>
+  <q-page class="flex flex-center">
+    <div class="container">
+    <div class="screen"><span>NOKIA</span>
+      <!-- <img class="image" src="https://i.pinimg.com/originals/e5/0c/c6/e50cc6fce3321a71d03526429c7b9c00.jpg" width="100px" alt=""> -->
+      <q-input class="image" bg-color="bg-teal text-white" v-model="text" />
+      <div class="middle-btn"></div>
+      <div class="call-btn">C</div>
+      <div class="chevrons">
+       </div>
+    </div>
+    <div class="buttons">
+      <div class="button-row1">
+        <q-btn class="btns btn-1" label="1"></q-btn>
+        <q-btn class="btns btn-2" label="2"></q-btn>
+        <q-btn class="btns btn-3" label="3"></q-btn>
+        <!-- <div class="btns btn-1">1</div> -->
+        <!-- <div class="btns btn-2">2</div> -->
+        <!-- <div class="btns btn-3">3</div> -->
+      </div>
+      <div class="button-row2">
+        <q-btn class="btns btn-4" label="4"></q-btn>
+        <q-btn class="btns btn-5" label="5"></q-btn>
+        <q-btn class="btns btn-6" label="6"></q-btn>
+        <!-- <div class="btns btn-4">4</div>
+        <div class="btns btn-5">5</div>
+        <div class="btns btn-6">6</div> -->
+      </div>
+      <div class="button-row3">
+        <q-btn class="btns btn-7" label="7"></q-btn>
+        <q-btn class="btns btn-8" label="8"></q-btn>
+        <q-btn class="btns btn-9" label="9"></q-btn>
+        <!-- <div class="btns btn-7">7</div>
+        <div class="btns btn-8">8</div>
+        <div class="btns btn-9">9</div> -->
+      </div>
+      <div class="button-row4">
+        <q-btn class="btns btn-10" label="*"></q-btn>
+        <q-btn class="btns btn-0" label="0"></q-btn>
+        <q-btn class="btns btn-12" label="#"></q-btn>
+        <!-- <div class="btns btn-10">*</div>
+        <div class="btns btn-0">0</div>
+        <div class="btns btn-12">#</div> -->
+      </div>
+    </div>
+  </div>
+  </q-page>
+</template>
+
+<script>
+export default {
+  name: 'PageIndex',
+  data () {
+    return {
+      text: '2 222',
+      btn1: '1'
+    }
+  },
+  methods: {
+    digitaNumero () {
+      this.text += this.btn1
+    }
+  }
+}
+</script>
+
+<style>
+*{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
-
-body {
+body{
   min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
 }
-
-.container {
+.container{
   position:relative;
   width:150px;
   height:300px;
@@ -20,8 +85,7 @@ body {
   box-shadow:inset 4px 0px 0 #ccc,
     inset -4px 0 0 #ccc;
 }
-
-.container:before {
+.container:before{
   position:absolute;
   top:-10px;
   left:17px;
@@ -31,10 +95,9 @@ body {
   background:rgb(68, 63, 88);
   content:"";
   border-radius:25px/20px;
-  
-}
 
-.container:after {
+}
+.container:after{
   position:absolute;
   bottom:-10px;
   left:22px;
@@ -44,8 +107,7 @@ body {
   content:"";
   border-radius:25px/20px;
 }
-
-.screen {
+.screen{
   width:120px;
   height:190px;
   left:15px;
@@ -54,9 +116,9 @@ body {
   position:absolute;
   border-radius:25% 25% 50% 50%/40% 40% 40% 40%;
   overflow:hidden;
-  
+
 }
-.screen:before {
+.screen:before{
   position:absolute;
   width:110px;
   height:160px;
@@ -66,22 +128,19 @@ body {
   background:rgb(68, 63, 88);
   border-radius:25% 25% 50% 50%/40% 40% 40% 40%;
 }
-
-.screen span {
+.screen span{
   position:absolute;
   top:25%;
   left:35%;
   font-size:10px;
   color:#ccc;
 }
-
-.image {
+.image{
   position:absolute;
   top:35%;
   border-radius:5px 5px 10px 10px/20px;
   left:8%;
 }
-
 .middle-btn{
   position:absolute;
   width:35px;
@@ -91,8 +150,7 @@ body {
   left:43px;
   border-radius:50%;
 }
-
-.middle-btn:before {
+.middle-btn:before{
   position:absolute;
   width:40px;
   height:15px;
@@ -100,7 +158,6 @@ body {
   border-radius:50%;
   box-shadow:inset 5px 5px 0px 0px rgba(204,204,204,0.75),inset -5px -5px 0 0 rgba(204,204,204,0.75);
 }
-
 .middle-btn:after{
   position:absolute;
   width:20px;
@@ -111,8 +168,7 @@ body {
   border-radius:2px 2px 2px 2px;
   border-bottom:2px solid #11899a;
 }
-
-.call-btn {
+.call-btn{
   position:absolute;
   width:25px;
   height:20px;
@@ -124,8 +180,7 @@ body {
   border-radius:5px;
   transform:rotate(30deg) skew(-15deg);
 }
-
-.chevrons {
+.chevrons{
   position:absolute;
   width:40px;
   height:20px;
@@ -135,17 +190,16 @@ body {
   border-radius: 5px 10px 10px 10px;
   transform:rotate(-45deg) skew(15deg);
 }
-
-.chevrons:after {
+.chevrons:after{
   position:absolute;
   width:10px;
   height:10px;
   content:"<";
   font-size:10px;
   left:5px;
-}
 
-.chevrons:before {
+}
+.chevrons:before{
   position:absolute;
   width:10px;
   height:10px;
@@ -153,8 +207,7 @@ body {
   font-size:10px;
   right:5px;
 }
-
-.buttons {
+.buttons{
   display:flex;
   flex-direction:column;
   position:relative;
@@ -164,24 +217,20 @@ body {
   height:120px;
   z-index:1;
 }
-
-.button-row1,.button-row2,.button-row3,.button-row4 {
+.button-row1,.button-row2,.button-row3,.button-row4{
   position:absolute;
   display:flex;
 }
-
-.button-row1 {
+.button-row1{
   top:5%;
 }
-
-.btns {
+.btns{
   margin:0 20px;
   font-size:15px;
   position:absolute;
   background:#ccc;
 }
-
-.btn-1,.btn-7,.btn-4,.btn-10 {
+.btn-1,.btn-7,.btn-4,.btn-10{
   width:30px;
   height:20px;
   top:10px;
@@ -190,8 +239,7 @@ body {
   text-align:center;
   transform:rotate(30deg)
 }
-
-.btn-2,.btn-5,.btn-8,.btn-0 {
+.btn-2,.btn-5,.btn-8,.btn-0{
   width:30px;
   height:20px;
   top:20px;
@@ -200,8 +248,7 @@ body {
   border-radius:50%;
   text-align:center;
 }
-
-.btn-3,.btn-6,.btn-9,.btn-12 {
+.btn-3,.btn-6,.btn-9,.btn-12{
   width:30px;
   height:20px;
   top:10px;
@@ -209,44 +256,37 @@ body {
   border:1px solid #000;
   border-radius:50%;
   text-align:center;
-  transform:rotate(-30deg);
+   transform:rotate(-30deg);
 }
-
-.btn-7 {
+.btn-7{
   top:5px;
 }
-
-.btn-8 {
+.btn-8{
   top:12px;
 }
-
-.btn-9 {
+.btn-9{
   top:5px;
 }
-
-.btn-10 {
+.btn-10{
   top:0px;
   left:5px;
 }
-
-.btn-0 {
+.btn-0{
   top:3px;
   left:44px;
 }
-
-.btn-12 {
+.btn-12{
   top:-2px;
   left:80px;
 }
-
-.button-row2 {
+  .button-row2{
   top:30%;
 }
-
-.button-row3 {
+.button-row3{
   top:60%;
 }
-
-.button-row4 {
+.button-row4{
   top:90%;
 }
+
+</style>
