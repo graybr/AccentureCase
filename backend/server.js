@@ -145,8 +145,8 @@ app.post("/", (req, res) =>{
         }else{
           frase.push('R')
         }
-      }else if(contagem[i]===3 || contagem[i]-1===3 && result[i].startsWith('#7')){
-        if(contagem[i]===3){
+      }else if(contagem[i]===4 || contagem[i]-1===4 && result[i].startsWith('#7')){
+        if(contagem[i]===4){
           frase.push('s')
         }else{
           frase.push('S')
@@ -191,7 +191,7 @@ app.post("/", (req, res) =>{
         }else{
           frase.push('Y')
         }
-      }else if(contagem[i]===3 || contagem[i]-1===3 && result[i].startsWith('#9')){
+      }else if(contagem[i]===4 || contagem[i]-1===4 && result[i].startsWith('#9')){
         if(contagem[i]===3){
           frase.push('z')
         }else{
