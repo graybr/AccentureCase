@@ -14,7 +14,9 @@ app.get("/", (req, res) =>{
 app.post("/", (req, res) =>{
     const palavra = req.body;
     var json2string=JSON.stringify(palavra)
-    var result = json2string;
+    const obj = JSON.parse(json2string)
+    var result = obj.frase.split('0')
+    console.log(result)
     var contagem =[]
     var frase =[]
     for(i=0;i<result.length;i++){
