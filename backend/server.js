@@ -12,10 +12,12 @@ app.get("/", (req, res) =>{
 })
 
 app.post("/", (req, res) =>{
-    var result = '202220222033066080880777033'.split('0')
-var contagem =[]
-var frase =[]
-for(i=0;i<result.length;i++){
+    const palavra = req.body;
+    var json2string=JSON.stringify(palavra)
+    var result = json2string;
+    var contagem =[]
+    var frase =[]
+    for(i=0;i<result.length;i++){
     contagem.push(result[i].length)
     for(j=i;j<contagem.length;j++){
       if(result[i].startsWith(2)||result[i].startsWith('#2')){
